@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AirtimeBuildTasks.Tests")]
+[assembly: AssemblyTitle("XtraConfigTask.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AirtimeBuildTasks.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyProduct("XtraConfigTask.Tests")]
+[assembly: AssemblyCopyright("Copyright © 2017 Michael Monsour")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
