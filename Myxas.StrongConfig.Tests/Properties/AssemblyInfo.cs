@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("XtraConfigTask.Tests")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Myxas.StrongConfig.Tests")]
+[assembly: AssemblyDescription("Test cases for Myxas.StrongConfig")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("XtraConfigTask.Tests")]
+[assembly: AssemblyCompany("Michael Monsour")]
+[assembly: AssemblyProduct("Myxas.StrongConfig.Tests")]
 [assembly: AssemblyCopyright("Copyright © 2017 Michael Monsour")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+  <metadata minClientVersion="2.8">
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>Michael Monsour</owners>
+    <licenseUrl>https://raw.githubusercontent.com/lethek/Myxas.StrongConfig/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/lethek/Myxas.StrongConfig</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>https://github.com/lethek/Myxas.StrongConfig/releases</releaseNotes>
+    <copyright>Copyright 2017 $author$</copyright>
+    <tags>config strongconfig</tags>
+    <developmentDependency>true</developmentDependency>
+    <dependencies />
+    <references />
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="build\" target="build" />
+  </files>
+</package>
