@@ -10,13 +10,13 @@ using Xunit;
 using Xunit.Abstractions;
 
 
-namespace XtraTools.Tests
+namespace Myxas.StrongConfig.Tests
 {
 
-	public class XtraConfigTests
+	public class StrongConfigTaskTests
 	{
 
-		public XtraConfigTests(ITestOutputHelper output)
+		public StrongConfigTaskTests(ITestOutputHelper output)
 		{
 			Output = output;
 		}
@@ -56,15 +56,15 @@ namespace XtraTools.Tests
 
 		private const string ProjectXml =
 @"<Project xmlns=""http://schemas.microsoft.com/developer/msbuild/2003"">
-	<UsingTask AssemblyFile=""XtraConfigTask.dll"" TaskName=""XtraConfigTask"" />
+	<UsingTask AssemblyFile=""Myxas.StrongConfig.dll"" TaskName=""StrongConfigTask"" />
 	<PropertyGroup>
 		<IntermediateOutputPath Condition=""$(IntermediateOutputPath) == '' Or $(IntermediateOutputPath) == '*Undefined*'"">$(MSBuildProjectDirectory)\obj\$(Configuration)</IntermediateOutputPath>
 	</PropertyGroup>
 	<Target Name=""InjectConfig"" BeforeTargets=""CoreCompile"">
-		<XtraConfigTask Source=""Settings.config"" Namespace=""Xtra"" OutputPath=""$(IntermediateOutputPath)"" CodeProvider=""CS"">
+		<StrongConfigTask Source=""Settings.config"" Namespace=""Myxas"" OutputPath=""$(IntermediateOutputPath)"" CodeProvider=""CS"">
 			<Output ItemName=""Generated"" TaskParameter=""GeneratedConfigPath"" />
 			<Output PropertyName=""GeneratedCode"" TaskParameter=""GeneratedCode""/>
-		</XtraConfigTask>
+		</StrongConfigTask>
 		<ItemGroup>
 			<Compile Include=""@(Generated)""/>
 			<FileWrites Include=""@(Generated)""/>

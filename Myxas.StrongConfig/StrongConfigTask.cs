@@ -13,12 +13,12 @@ using Microsoft.CSharp;
 using Microsoft.VisualBasic;
 
 
-namespace XtraTools.Tasks
+namespace Myxas.StrongConfig
 {
 
 	[Serializable]
 	[LoadInSeparateAppDomain]
-	public class XtraConfigTask : AppDomainIsolatedTask
+	public class StrongConfigTask : AppDomainIsolatedTask
 	{
 
 		[Required]

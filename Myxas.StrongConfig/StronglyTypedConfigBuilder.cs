@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 
 
-namespace XtraTools.Tasks
+namespace Myxas.StrongConfig
 {
 
 	public static class StronglyTypedConfigBuilder

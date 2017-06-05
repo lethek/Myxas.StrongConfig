@@ -7,8 +7,8 @@
     <ProjectGuid>{22D6D97E-7738-4DA5-9956-508793280B1C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XtraTools.Tasks</RootNamespace>
-    <AssemblyName>XtraConfigTask</AssemblyName>
+    <RootNamespace>Myxas.StrongConfig</RootNamespace>
+    <AssemblyName>Myxas.StrongConfig</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="StronglyTypedConfigBuilder.cs" />
-    <Compile Include="XtraConfigTask.cs" />
+    <Compile Include="StrongConfigTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

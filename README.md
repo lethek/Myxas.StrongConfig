@@ -1,1 +1,1 @@
-# XtraTools
+# Myxas.StrongConfig
