@@ -35,6 +35,7 @@ namespace Myxas.StrongConfig
 
 			var bindingFlags = new CodeTypeReferenceExpression(typeof(BindingFlags));
 			var configManager = new CodeTypeReferenceExpression(typeof(ConfigurationManager));
+			var environment = new CodeTypeReferenceExpression(typeof(Environment));
 			var thisProperties = new CodeFieldReferenceExpression(new CodeThisReferenceExpression(), "_properties");
 			var index = new CodeVariableReferenceExpression("index");
 			var props = new CodeVariableReferenceExpression("props");
@@ -221,6 +222,21 @@ namespace Myxas.StrongConfig
 							new CodeVariableDeclarationStatement(
 								stringType,
 								result.VariableName,
+								new CodeMethodInvokeExpression(
+									new CodeMethodReferenceExpression(environment, "GetEnvironmentVariable"),
+									new CodeArgumentReferenceExpression("key")
+								)
+							),
+							new CodeConditionStatement(
+								new CodeBinaryOperatorExpression(
+									result,
+									CodeBinaryOperatorType.IdentityInequality,
+									new CodePrimitiveExpression(null)
+								),
+								new CodeMethodReturnStatement(result)
+							),
+							new CodeAssignStatement(
+								new CodeVariableReferenceExpression(result.VariableName),
 								new CodeIndexerExpression(
 									new CodePropertyReferenceExpression(configManager, "AppSettings"),
 									new CodeArgumentReferenceExpression("key")
@@ -269,6 +285,21 @@ namespace Myxas.StrongConfig
 							new CodeVariableDeclarationStatement(
 								stringType,
 								result.VariableName,
+								new CodeMethodInvokeExpression(
+									new CodeMethodReferenceExpression(environment, "GetEnvironmentVariable"),
+									new CodePrimitiveExpression(setting.Key)
+								)
+							),
+							new CodeConditionStatement(
+								new CodeBinaryOperatorExpression(
+									new CodeVariableReferenceExpression(result.VariableName),
+									CodeBinaryOperatorType.IdentityInequality,
+									new CodePrimitiveExpression(null)
+								),
+								new CodeMethodReturnStatement(result)
+							),
+							new CodeAssignStatement(
+								new CodeVariableReferenceExpression(result.VariableName),
 								new CodeIndexerExpression(
 									new CodePropertyReferenceExpression(configManager, "AppSettings"),
 									new CodePrimitiveExpression(setting.Key)
